@@ -1,0 +1,510 @@
+/*-----------------CSS Personalizado------------------*/
+/*Estilos globales*/
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;: 
+}
+body{
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Raleway', sans-serif;
+    box-shadow: inset 0 0 5rem rgba(0,0,0,.5); 
+}
+.body1{
+    background-image: url(../img/fondo.jpg);
+}
+.body2{
+    background-image: url(../img/fondo4.jpg);
+}
+
+h1{
+    font-size: 2.25rem;
+    font-weight: 700;
+    text-shadow: 0 .05rem .1rem rgba(0,0,0,.5)
+}
+h2{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+p{
+    font-size: 0.875rem;
+    margin-bottom: 0; margin-top: .5rem 
+}
+/*----LINK----*/
+a { color: #fff; text-decoration: none; border: none}
+a:focus, a:hover { color: #e9ecef; text-decoration: none }
+
+/*----Colores----*/
+.bg-blanco-transp{ background-color: rgba(255,255,255,.7) }
+.bg-azul-dark{ background-color: #0070A8 }
+.bg-azul-xdark{ background-color: #003a56 }
+.bg-gris-dark{ background-color: #1d1b1b }
+.text-azul-dark { color: #0070A8 }
+.text-gris-dark { color: #1d1b1b }
+.text-rojo-dark { color: #DD1C1A }
+
+/*----Tamaño de fuente----*/
+.f-28{ font-size: 1.75rem } /*tamaño 28px*/
+.f-24{ font-size: 1.5rem } /*tamaño 24px*/
+.f-22{ font-size: 1.375rem } /*tamaño 22px*/
+.f-20{ font-size: 1.25rem } /*tamaño 20px*/
+.f-18{ font-size: 1.125rem } /*tamaño 18px*/
+.f-16{ font-size: 1rem } /*tamaño 16px*/
+.f-14{ font-size: .875rem } /*tamaño 14px*/
+.f-12{ font-size: .75rem } /*tamaño 12px*/
+
+/*----Bordes----*/
+.b-bottom{ border-bottom: 1px solid #e9ecef }
+
+/*------------------------Encabezado----------------------------*/
+
+.boton-solicitud{
+    width: 42.1052%; height: 13,9860%;
+    color: #0070A8; font-weight: 700;
+    border: 1px solid #0070A8;   
+}
+
+/*-----------------------Menú de Navegación----------------------*/
+nav{
+    background: #1d1b1b;
+    font-weight: bolder;
+}
+nav .navbar-nav a:hover{
+    color: #71afce
+}
+.navbar-expand-sm .navbar-nav .nav-link{
+    padding: .25rem .25rem; 
+    margin: .35rem .75rem 
+}
+
+/*--------------------Sección Mision y Vision----------------------*/
+.box-mision-vision:hover figure {
+    -webkit-transform: perspective(600px) rotateY(180deg);
+    -ms-transform: perspective(600px) rotateY(180deg);
+    -o-transform: perspective(600px) rotateY(180deg);
+    transform: perspective(600px) rotateY(180deg);:;
+}
+figure{
+    margin: 0; 
+    position: relative;
+    transition: all ease .5s;
+    transform-style: preserve-3d;
+    transform: perspective(600px) rotateY(0deg);
+    backface-visibility: hidden;
+}
+figure .frontal,
+figure .trasera{
+    
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    transform: all ease .5s;
+}
+.tarjeta-frontal{
+    display: block;
+}
+.tarjeta-trasera{
+    position: absolute;
+    top: 0;
+    padding: 20px;
+    color: #fff;
+    transform: perspective(600px) rotateY(180deg);
+    backface-visibility: hidden;
+    overflow: auto;
+
+}
+.tarjeta-trasera p{
+    text-shadow: none
+}
+figure img{
+    box-shadow: 0 3px 7px 2px #ccc
+}
+
+/*--------------------Sección Solicitud----------------------*/
+.fondo-solicitud{
+    background-image: url("../img/bg-solicitud.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.boton-ir-solicitud{
+    display: block;
+    height: 30px; width: 100%;
+    border-radius: 3px; border: solid 1px #0070A8;
+    background: transparent;
+    color: #0070A8; font-size: 1rem;
+    margin-right: auto; margin-left: auto; 
+}
+.boton-ir-solicitud:hover{
+    background: #0070A8;
+    color: white;
+}
+.boton-ir-solicitud:active{
+    background: #0070A8;
+    color: white;
+    border: solid 2px white 
+}
+
+/*--------------------Sección Formulario----------------------*/
+#divFormulario{
+    text-shadow: none;
+}
+.barra:hover{
+    background-color: rgba(0,112,168,.8);
+}
+.boton-enviar{
+    display: block;
+    height: 40px; width: 30%;
+    border-radius: 3px; border: solid 1px #0070A8;
+    background: transparent;
+    color: #0070A8; font-size: 1rem;
+    margin-right: auto; margin-left: auto; 
+}
+.boton-enviar:hover{
+    background: #0070A8;
+    color: white;
+}
+.boton-enviar:active{
+    background: #0070A8;
+    color: white;
+    border: solid 2px white 
+}
+
+/*------------Logo de organizaciones responsables---------*/
+.img-logo1{ height: 75px; width: 73.9451% }
+.img-logo2{ height: 36px; width: 56.7485% }
+.img-logo3{ height: 75px; width: 64.2750% }
+.img-logo4{ height: 82px; width: 54.6083% }
+.img-logo5{ height: 66px; width: 64.8674% }
+
+.redessociales{ width: 35px; height: 35px }
+.redessociales:hover{ width: 40px; height: 40px }
+
+.p-redes{
+    color: #fff;
+    text-decoration: none;
+    font-size: .755rem;
+}
+
+/*------------Inicio de Sesión Administrador----------*/
+.body-login{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    box-shadow: none
+}
+.body-login>div>div{
+     height: 100vh; width: 70%;    
+}
+.body-login div div .box-login{
+    box-shadow: 0px 0px 4px 0px rgba(0,0,0,.4);
+    border-radius: 1px;
+}
+.parte-azul h2{
+    color: #021A45CC; 
+}
+
+.parte-blanca input{
+    height: 40px;
+    border-radius: 1px;
+    box-shadow:  0 1px 5px #eee inset;
+}
+.parte-blanca button{
+    height: 40px; width: 40%;
+    border: 1px solid whitesmoke;
+    background-color: #0070A8;
+    color: white;
+}
+.parte-blanca .box-error{
+    margin: 0; padding: 0;
+}
+.parte-blanca div #error{
+    list-style: none; padding: 8px ;
+    border-radius: 0; 
+    display: none;
+}
+/*------------Validación del formulario---------*/
+.input-error{
+    border: 1px solid #dc3545;
+    box-shadow: 0 0 5px #d45252;
+}
+
+/*-----------------------------Administrador-----------------------------------*/
+.body-administrador header{
+    width: 70%
+}
+.body-administrador header div article .botones{
+    margin: 20px 0; padding: 0px
+}
+.body-administrador header a{
+    display: block;
+    background: white;
+    text-align: center;
+    color: #6c757d;
+    width: 85%; height: 3rem;
+    padding: 0.65rem 0;
+    border-radius: 1px;
+    box-shadow: 0px 0px 6px 2px #00000079;
+}
+.body-administrador header a:hover{
+    background: #F2F2F2;
+    color: #2E2E2E;
+    border-radius: 1px;
+    box-shadow: 0px 0px 7px 3px #F2F2F280
+}
+.menu-navegacion-admi{
+    box-shadow: 0px 2px 4px 1px #000
+}
+
+.menu-navegacion-admi div div .item-activado{
+    color: #9BD0DD; 
+    border-bottom: 3px solid; 
+}
+/*-------Barra Lateral-------*/
+.administrador-diseño-principal section div .menu-lateral{
+    border-right: 1px solid #F2F2F2; 
+    height: 100vh; max-width: 200px; min-width: 155px;
+    padding-top: 60.4px; padding-right: 0;
+    background-color: #F3F3F3; z-index: 10
+}
+.administrador-diseño-principal div div .enlace-menu{
+    padding: 10px 1.25rem;
+    color: #0070A8;d
+    //border-bottom: 1px solid
+}
+.administrador-diseño-principal div div .enlace-menu:hover{
+    color:whitesmoke;
+    background-color: #4597BF;
+}
+.administrador-diseño-principal div div .activado{
+    background-color: #0070A8;
+    color:whitesmoke;
+}
+/*------Caja de Contenido-------*/
+.administrador-diseño-principal section div .contenido{
+    height: 100vh;
+    padding-top: 60px;
+    padding-left: 216px;
+}
+/*Opcion listado*/
+.administrador-diseño-principal .boton-ver-perfil{
+    display: block;
+    height: 25px; width: 2rem;
+    border: 1px solid #70BCCF; border-radius: 2px;
+    color: whitesmoke;
+    background: #70BCCF;
+    margin:0 auto;
+}
+.administrador-diseño-principal .boton-ver-perfil:hover{
+    color: white;
+    background: #9BD0DD;
+    border: 1px solid #9BD0DD;
+}
+/*Opcion perfil*/
+.administrador-diseño-principal .box-consulta{
+    background-color: whitesmoke;
+    padding: 12px; margin: 0 0 1rem; 
+}
+.administrador-diseño-principal .box-consulta p{
+    color: #0070a8;
+    margin: 5px 0
+}
+.administrador-diseño-principal .btn-mostrar-perfil{
+    height: 31px;
+    padding: 3px 10px;
+    font-size: 14px;
+    border: 1px solid #0070A8;
+    border-radius: 0 4px 4px 0;
+    color:white;
+    background: #0070A8  
+}
+.administrador-diseño-principal .btn-mostrar-perfil:hover{
+    border: 1px solid #4597BF;
+    color: whitesmoke;
+    background: #4597BF
+}
+.administrador-diseño-principal .btn-mostrar-perfil:active{
+    border: 1px solid white;
+    color: whitesmoke;
+    background: #177DAF
+}
+.administrador-diseño-principal .tabla-listado{
+    height: 72vh;
+    overflow-x: auto;
+}
+.administrador-diseño-principal .tabla-perfil{
+    height: 65vh;
+    overflow-x: auto;
+}
+.administrador-diseño-principal .tabla-perfil-inscrito{
+    height: 73vh;
+    overflow-x: auto;
+}
+.administrador-diseño-principal .boton-perfil:first-child{
+    border: none;
+    border-radius: 3px 0 0 3px
+}
+.administrador-diseño-principal .boton-perfil{
+    background: #9BD0DD;
+    border: none;
+    color: whitesmoke;
+    max-width: 150px;
+    border-radius: 1px ;
+    margin: 0 10px
+}
+.administrador-diseño-principal .boton-perfil:last-child{
+    background: #488594;
+    border: none;
+    border-radius: 0 3px 3px 0
+}
+.administrador-diseño-principal .boton-perfil:hover{
+    background: #62B6CB;
+}
+.administrador-diseño-principal .boton-perfil:last-child:hover{
+    background: #36646F;
+}
+/*-------Opcion documento--------*/
+.administrador-diseño-principal section article{
+    padding: 0; margin: 1rem 0
+}
+.administrador-diseño-principal section article:hover{
+    box-shadow: 0px 1px 9px  #15151544;
+}
+.administrador-diseño-principal .caja-documento{
+	border: 1px solid rgba(216,216,216,0.6);
+	border-radius: 4px;
+	box-shadow: 0px 1px 6px rgba(216,216,216,0.4);
+    height:12rem; 
+    background: #9BD0DD
+}
+.administrador-diseño-principal .caja-documento:hover{
+	box-shadow: none;
+}
+.administrador-diseño-principal .caja-documento span{
+    font-size: 6rem;
+    color: #fff;
+} 
+article:hover .caja-documento span{
+    font-size: 6.5rem;
+}
+.administrador-diseño-principal .caja-descargar{
+	margin-top: 5px;
+	border: 1px solid rgba(11,97,56,0.3);
+	border-radius: 0 0 4px 4px 
+}
+.administrador-diseño-principal .caja-descargar .boton-descargar{
+    border: none; border-right: 1px solid #17a2b8;
+    height: 2.4375rem; width: 2.5rem;
+    background: #fff; color: #17a2b8;
+    border-radius: 0  0 0 2px
+}
+.administrador-diseño-principal .caja-descargar .boton-descargar:hover{
+    background: #17a2b8; color: #fff
+}
+
+.administrador-diseño-principal .caja-descargar p{
+    display: inline-block;
+    margin: 8px auto;
+    width: 79%;
+}
+/*---------Opcion logo--------*/
+.administrador-diseño-principal .logo-uleam{
+    margin-top: 60% 
+}
+.administrador-diseño-principal .logo-uleam img{
+    height: auto; width: 8rem;
+}
+/*---------Administracion Curso--------*/
+.insertar-curso{
+    border: 1px solid whitesmoke;
+    border-radius: 2px;
+    padding: 25px 0 10px;
+    margin: 40px 0;        
+}
+/*---------Administracion Ajustes--------*/
+.tabla-datos{
+    border: 1px solid #9BD0DD;
+    border-radius: 2px
+}
+@font-face {
+	font-family: 'Glyphicons Halflings';
+	src: url('../fonts/glyphicons-halflings-regular.eot');
+  	src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fuentes/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+.glyphicon {
+  	font-family: 'Glyphicons Halflings';
+  	font-style: normal;
+  	font-weight: 200;
+  	line-height: 1;
+  	-webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
+}
+.glyphicon-user:before {
+    content: "\e008";
+}
+.glyphicon-edit:before {
+  	content: "\e065";
+}
+.glyphicon-plus-sign:before{
+    content: "\e081";
+}
+.glyphicon-info-sign:before{
+    content: "\e086";
+}
+.glyphicon-chevron-down:before{
+    content: "\e114";
+}
+.glyphicon-education:before{
+    content: "\e233";
+}
+.glyphicon-menu-hamburger:before{
+    content: "\e236";
+}
+.dd:before{
+    content: "\e166";
+} 
+.glyphicon-exclamation-sign:before{
+    content: "\e106";
+} 
+.glyphicon-search:before{
+    content:"\e003";
+}
+.glyphicon-glyphicon-th-list:before{
+    content:"\e012";
+}
+.glyphicon-file:before{
+    content:"\e022";
+}
+.glyphicon-save:before{
+    content: "\e166";
+} 
+.glyphicon-envelope:before{
+    content:"\2709";
+} 
+.glyphicon-list-alt:before{
+    content:"\e032";
+} 
+.glyphicon-folder-open:before{
+    content:"\e118";
+} 
+.glyphicon-trash:before {
+  content: "\e020";
+}
+.glyphicon-pencil:before {
+  content: "\270f";
+}
+.glyphicon-ok:before {
+  content: "\e013";
+}
+.glyphicon-remove:before {
+  content: "\e014";
+}
+.glyphicon-plus:before {
+  content:"\2b";
+}

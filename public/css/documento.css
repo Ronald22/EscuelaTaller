@@ -1,0 +1,92 @@
+* {
+	padding: 0; margin: 0 ; box-sizing: border-box;
+}
+body{
+    font-family: 'Raleway', sans-serif;
+}
+
+/* HEADER */
+.encabezado{
+	background-color: #0070A8;
+	box-shadow: 0 0px 7px 1px #2d2d2d
+}
+header .contenedor{
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+header .titulo-principal{
+	color: #FFF;
+	font-weight: 700;
+	border-left:1px solid rgba(216,216,216,0.4);
+	padding-left: 10px;
+}
+.section-1{
+	margin-top: 80px;
+	margin-bottom:20px; 
+}
+.section-2{
+
+	margin-bottom:80px; 
+}
+section .caja-documento{
+	border: 1px solid rgba(216,216,216,0.6);
+	border-radius: 4px;
+	padding: 5px;
+	box-shadow: 0px 1px 7px 2px rgba(216,216,216,0.4);
+}
+
+section .caja-documento .documento {
+	max-width: 100%; 
+	max-height: 100%
+}
+
+section .caja-descargar{
+	margin-top: 5px;
+	border: 1px solid rgba(11,97,56,0.3);
+	border-radius: 0 0 4px 4px 
+}
+
+section .caja-descargar .boton-decargar{
+
+}
+
+section .caja-descargar p{
+	display: inline-block;
+	margin: 0 auto;
+	width: 60%
+}
+
+/*------------Logo de organizaciones responsables---------*/
+.img-logo1{ height: 75px; width: 73.9451% }
+.img-logo2{ height: 36px; width: 56.7485% }
+.img-logo3{ height: 75px; width: 64.2750% }
+.img-logo4{ height: 82px; width: 54.6083% }
+.img-logo5{ height: 66px; width: 64.8674% }
+
+.redessociales{ width: 35px; height: 35px }
+.redessociales:hover{ width: 40px; height: 40px }
+
+.p-redes{
+    color: #fff;
+    text-decoration: none;
+    font-size: .755rem;
+}
+
+
+@font-face {
+	font-family: 'Glyphicons Halflings';
+	src: url('../../fonts/glyphicons-halflings-regular.eot');
+  	src: url('../../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../../fuentes/glyphicons-halflings-regular.woff2') format('woff2'), url('../../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+.glyphicon {
+  	font-family: 'Glyphicons Halflings';
+  	font-style: normal;
+  	font-weight: 200;
+  	line-height: 1;
+  	-webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
+}
+
+.glyphicon-save:before{
+    content: "\e166";
+} 

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Escuela Taller</title>
+	
+	<!-- referencia a estilos de bootstrap -->
+	<link rel="stylesheet" href="../../css/bootstrap/bootstrap.min.css">
+	<!-- referencia a estilos personalizados -->
+	<link rel="stylesheet" href="../../css/diseño.css">
+	<!-- fuente Roboto y Raleway de google fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet">
+
+</head>
+<body class="administrador-diseño-principal">
+
+	<!-- encabezado del diseño principal -->
+	<header class="container">
+	</header>
+
+	<!-- menú de navegación -->
+	<nav class="menu-navegacion-admi navbar navbar-expand-sm fixed-top f-14">
+	 	<a class="navbar-brand ml-2" href="administrador.html">ADMINISTRADOR</a>
+	 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+	    	<span class="navbar-toggler-icon"></span>
+	    </button>
+  		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    		<div class="navbar-nav ml-auto">
+      			<a class="nav-item nav-link" href="postulante.html">POSTULANTES</a>
+      			<a class="nav-item nav-link" href="inscrito.html">INSCRITOS</a>
+      			<a class="item-activado nav-item nav-link" href="curso.html">CURSOS</a>
+      			<a class="nav-item nav-link" href="ajustes.html">AJUSTES</a>
+    		</div>
+  		</div>
+	</nav>
+
+	<section class="bg-white container-fluid">
+		<div class="row">
+			<div class="menu-lateral nav flex-column nav-pills col-2 fixed-top" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+			  	<a class="enlace-menu activado" id="listadoPostulante" data-toggle="pill" href="#v-pills-listado" role="tab" aria-controls="v-pills-listado" aria-selected="true"><span class="f-12 glyphicon glyphicon-glyphicon-th-list"></span> Listado</a>
+			  	<a class="enlace-menu" id="perfilPostulante" data-toggle="pill" href="#v-pills-insertar" role="tab" aria-controls="v-pills-insertar" aria-selected="false"><span class="f-12 glyphicon glyphicon-plus"></span> Registrar</a>
+			  	<a class="enlace-menu" id="documentoPostulante" data-toggle="pill" href="#v-pills-editar" role="tab" aria-controls="v-pills-editar" aria-selected="false"><span class="f-12 glyphicon glyphicon-edit"></span> Editar</a>
+			  	<div class="logo-uleam d-block mx-auto ">
+			  		<img class="" src="../../img/logoUleam.png" alt="Uleam" title="Uleam">
+			  	</div>
+			</div>
+			<div class="contenido tab-content col" id="v-pills-tabContent">
+			  	<div class="tab-pane fade show active" id="v-pills-listado" role="tabpanel" aria-labelledby="listadoPostulante">
+			  		<div class="row">
+	  					<div class="col-3 mx-auto mt-3">
+	  						<div class="input-group mb-3">
+							  	<div class="input-group-prepend">
+							    	<span class="input-group-text glyphicon glyphicon-search" id="basic-addon1"></span>
+							  	</div>
+							  	<input type="text" class="form-control form-control-sm" id="buscarCurso" placeholder="Buscar por id o nombre" aria-label="Buscar por id o nombre" aria-describedby="basic-addon1">
+							</div>
+	  					</div>
+	  					<div class="w-100"></div>
+			  			<div id="tablaListadoCurso" class="tabla-listado col-7 f-14 mx-auto">	
+			  				
+			  			</div>
+			  			<div class="modal fade" id="mensajeConfirmacion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+						  	<div class="modal-dialog" role="document">
+						    	<div class="modal-content">
+						      		<div class="modal-header">
+						        		<h5 class="modal-title" id="exampleModalLabel">Confirmar Acción</h5>
+						        		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						          			<span aria-hidden="true">&times;</span>
+						        		</button>
+						      		</div>
+						      	<div class="modal-body">
+						        	<p id="mensajeOpcion"></p>
+						      	</div>
+						      	<div class="modal-footer">
+						        	<button type="button" id="btnEliminarCurso" class="btn btn-danger">Eliminar</button>
+						      	</div>
+						    </div>
+						  </div>
+						</div>
+			  		</div>
+			  	</div>	
+			  	<div class="tab-pane fade" id="v-pills-insertar" role="tabpanel" aria-labelledby="perfilPostulante">					
+			  		<div class="box-consulta row justify-content-between">
+				  		<div class="col-5">
+				  			<p>Llene los campos del curso a registrar:</p>
+				  		</div>
+			  		</div>
+			  		<div class="row">				  	
+			  			<div id="formularioInsertarCurso" class="insertar-curso col-6 f-14 mb-3 mx-auto">
+			  				<form>				        		
+			        			<div class="form-group row">
+			        				<div class="col-4">
+			        					<label class="ml-auto d-none d-md-flex col-form-label col-form-label-sm" for="txtId" style="width: 15px">Id:</label>
+			        				</div>
+			        				<div class="col-2">
+			        					<input type="text" class="form-control form-control-sm" id="txtId" aria-describedby="nameHelp" disabled="true">
+			        				</div>
+			        			</div>
+
+			        			<div class="w-100"></div>
+
+			        			<div class="form-group row">
+									<div class="col-4">
+										<label class="ml-auto d-none d-md-flex col-form-label col-form-label-sm" for="txtNombreCurso" style="width: 122px">Nombre del Curso:</label>
+									</div>
+									<div class="col-6">
+										<input type="text" class="form-control form-control-sm" id="txtNombreCurso" aria-describedby="nameHelp" placeholder="Indique el nombre del curso">
+									</div>
+								</div>
+
+								<div class="w-100"></div>
+
+								<div class="form-group row">
+									<div class="col-4">
+										<label for="selectTipo" class="ml-auto d-none d-md-flex col-form-label col-form-label-sm" style="width: 66px">Categoria:</label>
+									</div>
+									<div class="col-6">
+										<select id="selectTipo" class="form-control form-control-sm">
+									        <option value="categoria" selected disabled>Categorías</option>
+									    </select>
+									</div>
+								</div>
+
+								<div class="w-100"></div>
+			        			
+			        			<div class="form-group row">
+			        				<div class="col-4">
+			        					<label class="ml-auto d-md-flex col-form-label col-form-label-sm" for="txtEdadMin" style="width: 88px">Edad mínima:</label>
+			        				</div>
+			        				<div class="col-2">
+			        					<input type="number" class="form-control form-control-sm rango-edad" id="txtEdadMin" aria-describedby="nameHelp" placeholder="Min">
+			        				</div>
+									<div class="col-2">
+										<label class="ml-auto d-md-flex col-form-label col-form-label-sm" for="txtEdadMax" style="width: 92px">Edad máxima:</label>
+									</div>
+									<div class="col-2">
+										<input type="number" class="form-control form-control-sm rango-edad" id="txtEdadMax" aria-describedby="nameHelp" placeholder="Max" data-toggle="tooltip" data-placement="right">
+									</div>
+								</div>
+
+								<div class="w-100"></div>
+
+								<div class="form-group row">
+									<div class="col-4">
+										<label class="ml-auto d-none d-md-flex col-form-label col-form-label-sm" for="txtDescripcion" style="width: 82px">Descripción:</label>
+									</div>
+									<div class="col-6">
+										<textarea class="form-control form-control-sm" id="txtDescripcion" rows="3" placeholder="Indique una descripción para este curso"></textarea>
+									</div>
+								</div>
+			  				</form>			  							
+	  					</div>
+	  					<div class="w-100"></div>
+	  					<div class="col-6 p-0 mx-auto">
+							<ul class="alert alert-danger rounded text-left f-12" id="error" role="alert" style="list-style: none; padding-left: 8px; display: none ">
+							</ul>
+						</div>
+	  					<div class="col-12">
+	  						<div class="row justify-content-center">
+	  							<button type="button" id="btnInsertarCurso" class="col-2 boton-perfil btn">Registrar</button>
+	  						</div>
+	  					</div>
+	  					<div class="modal fade" id="confirmarRegistro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+						  	<div class="modal-dialog" role="document">
+						    	<div class="modal-content">
+					      		<div class="modal-header">
+							        	<h5 class="modal-title" id="exampleModalLabel">Registro</h5>
+							        	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							          		<span aria-hidden="true">&times;</span>
+							        	</button>
+						      	</div>
+						      	<div class="modal-body p-3 m-0 text-left">
+						        		<small class="text-mute">EL curso <span id="nombreCurso"></span> se ha registado con éxito</small>
+						      	</div>
+						    		<div class="modal-footer">
+						        		
+						      	</div>
+						    	</div>
+						  	</div>
+						</div>
+			  		</div>
+			  	</div>
+			  	<div class="tab-pane fade" id="v-pills-editar" role="tabpanel" aria-labelledby="documentoPostulante">	
+			  		<div class="box-consulta row justify-content-between">
+				  		<div class="col-5">
+				  			<p>Escriba el id o el nombre del curso que quiere editar:</p>
+				  		</div>
+			  			<div class="col-4">
+	  						<div class="input-group">
+							  	<input type="text" class="form-control form-control-sm" id="llenarCampos" placeholder="Id o nombre" aria-label="Buscar por cédula" aria-describedby="basic-addon1">
+							  	<button type="button" id="btnLlenarCampos" class="btn-mostrar-perfil ml-auto">Mostrar</button>
+							</div>	
+	  					</div>
+	  					<div class="modal fade" id="noExisteCurso" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+						  	<div class="modal-dialog" role="document">
+						    	<div class="modal-content">
+					      		<div class="modal-header">
+							        	<h5 class="modal-title" id="exampleModalLabel">Información del curso</h5>
+							        	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							          		<span aria-hidden="true">&times;</span>
+							        	</button>
+						      	</div>
+						      	<div class="modal-body p-3 m-0 text-left">
+						        		<small class="text-mute">EL curso no está registrado</small>
+						      	</div>
+						    		<div class="modal-footer">
+						        		
+						      	</div>
+						    	</div>
+						  	</div>
+						</div>
+			  		</div>
+			  		<div class="row justify-content-around">
+						<div id="formularioEditarCurso" class="insertar-curso col-6 f-14 mb-3 mx-auto">
+			  				<form>				        		
+			        			<div class="form-group row">
+			        				<div class="col-4">
+			        					<label class="ml-auto d-none d-md-flex col-form-label col-form-label-sm" for="txtId2" style="width: 15px">Id:</label>
+			        				</div>
+			        				<div class="col-2">
+			        					<input type="text" class="form-control form-control-sm" id="txtId2" aria-describedby="nameHelp" disabled="true">
+			        				</div>
+			        			</div>
+
+			        			<div class="w-100"></div>
+
+			        			<div class="form-group row">
+									<div class="col-4">
+										<label class="ml-auto d-none d-md-flex col-form-label col-form-label-sm" for="txtNombreCurso2" style="width: 122px">Nombre del Curso:</label>
+									</div>
+									<div class="col-6">
+										<input type="text" class="form-control form-control-sm" id="txtNombreCurso2" aria-describedby="nameHelp" placeholder="Indique el nombre del curso" disabled="true">
+									</div>
+								</div>
+
+								<div class="w-100"></div>
+
+								<div class="form-group row">
+									<div class="col-4">
+										<label for="selectTipo2" class="ml-auto d-none d-md-flex col-form-label col-form-label-sm" style="width: 66px">Categoria:</label>
+									</div>
+									<div class="col-6">
+										<select id="selectTipo2" class="form-control form-control-sm" disabled="true">
+									        <option selected disabled>Categorías</option>
+									    </select>
+									</div>
+								</div>
+
+								<div class="w-100"></div>
+			        			
+			        			<div class="form-group row">
+			        				<div class="col-4">
+			        					<label class="ml-auto d-md-flex col-form-label col-form-label-sm" for="txtEdadMin2" style="width: 88px">Edad mínima:</label>
+			        				</div>
+			        				<div class="col-2">
+			        					<input type="number" class="form-control form-control-sm rango-edad2" id="txtEdadMin2" aria-describedby="nameHelp" placeholder="Min" disabled="true">
+			        				</div>
+									<div class="col-2">
+										<label class="ml-auto d-md-flex col-form-label col-form-label-sm" for="txtEdadMax2" style="width: 92px">Edad máxima:</label>
+									</div>
+									<div class="col-2">
+										<input type="number" class="form-control form-control-sm rango-edad2" id="txtEdadMax2" aria-describedby="nameHelp" placeholder="Max" disabled="true">
+									</div>
+								</div>
+
+								<div class="w-100"></div>
+
+								<div class="form-group row">
+									<div class="col-4">
+										<label class="ml-auto d-none d-md-flex col-form-label col-form-label-sm" for="txtDescripcion2" style="width: 82px">Descripción:</label>
+									</div>
+									<div class="col-6">
+										<textarea class="form-control form-control-sm" id="txtDescripcion2" rows="3" placeholder="Indique una descripción para este curso" disabled="true"></textarea>
+									</div>
+								</div>
+			  				</form>			  							
+	  					</div>
+	  					<div class="w-100"></div>
+	  					<div class="col-6 p-0 mx-auto">
+							<ul class="alert alert-danger rounded text-left f-12" id="error2" role="alert" style="list-style: none; padding-left: 8px; display: none">
+							</ul>
+						</div>
+	  					<div class="col-12">
+	  						<div class="row justify-content-center">
+	  							<button type="button" id="btnEditarCurso" class="col-2 boton-perfil btn" disabled="true">Editar</button>
+	  						</div>
+	  					</div>
+	  					<div class="modal fade" id="confirmarEdicion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+						  	<div class="modal-dialog" role="document">
+						    	<div class="modal-content">
+					      		<div class="modal-header">
+							        	<h5 class="modal-title" id="exampleModalLabel">Edición</h5>
+							        	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							          		<span aria-hidden="true">&times;</span>
+							        	</button>
+						      	</div>
+						      	<div class="modal-body p-3 m-0 text-left">
+						        		<small class="text-mute">EL curso <span id="nombreCurso"></span> se ha modificado con éxito</small>
+						      	</div>
+						    		<div class="modal-footer">
+						        		
+						      	</div>
+						    	</div>
+						  	</div>
+						</div>
+			  		</div>
+					</div>
+			  	</div>
+			  	<!-- <footer id="pie-de-pagina" style="background: #1d1b1b" >
+					<div class="container-fluid">
+						<article class="row bg-white justify-content-center align-items-end pt-5 pb-5">
+							<div class="d-none d-md-flex col-12 col-md-2 px-0"><img class="img-logo1 mx-auto d-block" src="../../img/logoManabi.png" alt="Gobierno provincial de Manabí" title="Gobierno provincial de Manabí"></div>
+							<div class="d-none d-md-flex col-12 col-md-3 px-0"><img class="img-logo2 mx-auto d-block" src="../../img/logoAecid.png" alt="Aecid" title="Aecid"></div>
+							<div class="d-none d-md-flex col-12 col-md-2 px-0"><img class="img-logo3 mx-auto d-block" src="../../img/logoUleam.png" alt="Uleam" title="Uleam"></div>
+							<div class="d-none d-md-flex col-12 col-md-2 px-0"><img class="img-logo4 mx-auto d-block" src="../../img/logoManabiProduce.png" alt="Manabí produce" title="Manabí produce"></div>
+							<div class="d-none d-md-flex col-12 col-md-2 px-0"><img class="img-logo5 mx-auto d-block" src="../../img/logoEP.jpg" alt="EP Uleam" title="EP Uleam"></div>
+						</article>
+					</div>
+				</footer> -->
+			</div>
+		</div>
+	</section>
+
+	
+	<!-- enlaces de archivos js de bootstrap y javascript personalizado -->
+	<script src="../../js/jquery/jquery.min.js" type="text/javascript"></script>
+	<script src="../../js/popper/popper.min.js" type="text/javascript"></script>
+	<script src="../../js/bootstrap/bootstrap.min.js" type="text/javascript"></script>
+	<script src="../../js/main.js" type="text/javascript"></script>
+	<script src="../../js/jsPDF/jspdf.min.js"></script>
+</body>
+</html>

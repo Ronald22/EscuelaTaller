@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Escuela Taller</title>
+	
+	<!-- referencia a estilos de bootstrap -->
+	<link rel="stylesheet" href="../../css/bootstrap/bootstrap.min.css">
+	<!-- referencia a estilos personalizados -->
+	<link rel="stylesheet" href="../../css/diseño.css">
+	<!-- fuente Roboto y Raleway de google fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet">
+
+</head>
+<body class="administrador-diseño-principal">
+
+	<!-- encabezado del diseño principal -->
+	<header class="container">
+	</header>
+
+	<!-- menú de navegación -->
+	<nav class="menu-navegacion-admi navbar navbar-expand-sm fixed-top f-14">
+	 	<a class="navbar-brand ml-2" href="administrador.html">ADMINISTRADOR</a>
+	 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+	    	<span class="navbar-toggler-icon"></span>
+	    </button>
+  		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    		<div class="navbar-nav ml-auto">
+      			<a class="nav-item nav-link" href="postulante.html">POSTULANTES</a>
+      			<a class="item-activado nav-item nav-link" href="inscrito.html">INSCRITOS</a>
+      			<a class="nav-item nav-link" href="curso.html">CURSOS</a>
+      			<a class="nav-item nav-link" href="ajustes.html">AJUSTES</a>
+    		</div>
+  		</div>
+	</nav>
+
+	<section class="bg-white container-fluid">
+		<div class="row">
+			<div class="menu-lateral nav flex-column nav-pills col-2 fixed-top" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+			  	<a class="enlace-menu activado" id="listadoPostulante" data-toggle="pill" href="#v-pills-listado" role="tab" aria-controls="v-pills-listado" aria-selected="true"><span class="f-12 glyphicon glyphicon-glyphicon-th-list"></span> Listado</a>
+			  	<a class="enlace-menu" id="perfilPostulante" data-toggle="pill" href="#v-pills-perfil" role="tab" aria-controls="v-pills-perfil" aria-selected="false"><span class="f-12 glyphicon glyphicon-user"></span> Perfil</a>
+			  	<a class="enlace-menu" id="documentoPostulante" data-toggle="pill" href="#v-pills-documento" role="tab" aria-controls="v-pills-documento" aria-selected="false"><span class="f-12 glyphicon glyphicon-folder-open"></span> Documentos</a>
+			  	<div class="logo-uleam d-block mx-auto ">
+			  		<img class="" src="../../img/logoUleam.png" alt="Uleam" title="Uleam">
+			  	</div>
+			</div>
+			<div class="contenido tab-content col" id="v-pills-tabContent">
+			  	<div class="tab-pane fade show active" id="v-pills-listado" role="tabpanel" aria-labelledby="listadoPostulante">
+			  		<div class="row">
+	  					<div class="col-3 ml-auto mt-3">
+	  						<div class="input-group mb-3">
+							  	<div class="input-group-prepend">
+							    	<span class="input-group-text glyphicon glyphicon-search" id="basic-addon1"></span>
+							  	</div>
+							  	<input type="text" class="form-control form-control-sm" id="buscarInscrito" placeholder="Buscar por Cédula" aria-label="Buscar por Cédula" aria-describedby="basic-addon1">
+							</div>
+	  					</div>
+			  			<div id="tablaListadoInscrito" class="tabla-listado col-12 f-14">	
+			  				
+			  			</div>
+			  			<div>
+			  				<button type="button" class="btn btn-success ml-3">Descargar Listado</button>
+			  			</div>	
+			  		</div>
+			  	</div>	
+			  	<div class="tab-pane fade" id="v-pills-perfil" role="tabpanel" aria-labelledby="perfilPostulante">					
+			  		<div class="box-consulta row justify-content-between">
+				  		<div class="col-5">
+				  			<p>Escriba el número de cédula o el código del Inscrito:</p>
+				  		</div>
+			  			<div class="col-4">
+	  						<div class="input-group">
+							  	<input type="text" class="form-control form-control-sm" id="mostrarPerfilEstudiante" placeholder="Cédula o código" aria-label="Buscar por cédula" aria-describedby="basic-addon1">
+							  	<button id="btnMostrarPerfilEstudiante" type="button" class="btn-mostrar-perfil ml-auto">Mostrar</button>
+							</div>	
+	  					</div>
+			  		</div>
+			  		<div class="row">				  	
+  						<div id="nombreEstudiante" class="col-12 mb-2"></div>
+			  			<div id="tablaPerfilEstudiante" class="tabla-perfil-inscrito col-12 f-14 mb-3">
+			  				
+	  					</div>
+			  		</div>
+			  	</div>
+			  	<div class="tab-pane fade" id="v-pills-documento" role="tabpanel" aria-labelledby="documentoPostulante">	
+			  		<div class="box-consulta row justify-content-between">
+				  		<div class="col-5">
+				  			<p>Escriba el número de cédula o el código del Inscrito:</p>
+				  		</div>
+			  			<div class="col-4">
+	  						<div class="input-group">
+							  	<input type="text" class="form-control form-control-sm" id="mostrarDocumentosEstudiante" placeholder="Cédula o código" aria-label="Buscar por cédula" aria-describedby="basic-addon1">
+							  	<button id="btnMostrarDocumentosEstudiante" type="button" class="btn-mostrar-perfil ml-auto">Mostrar</button>
+							</div>	
+	  					</div>
+			  		</div>
+			  		<div class="row justify-content-around">
+						<div id="nombreEstudiante2" class="col-11 px-0 mt-5 mb-2"></div>
+						<article id="solicitudEstudiante" class="col-3">
+						
+						</article>
+						<article id="actaEstudiante" class="col-3">
+							
+						</article>
+						<article id="compromisoEstudiante" class="col-3">
+							
+						</article>
+					</div>
+			  	</div>
+			  	<!-- <footer id="pie-de-pagina" style="background: #1d1b1b" >
+					<div class="container-fluid">
+						<article class="row bg-white justify-content-center align-items-end pt-5 pb-5">
+							<div class="d-none d-md-flex col-12 col-md-2 px-0"><img class="img-logo1 mx-auto d-block" src="../../img/logoManabi.png" alt="Gobierno provincial de Manabí" title="Gobierno provincial de Manabí"></div>
+							<div class="d-none d-md-flex col-12 col-md-3 px-0"><img class="img-logo2 mx-auto d-block" src="../../img/logoAecid.png" alt="Aecid" title="Aecid"></div>
+							<div class="d-none d-md-flex col-12 col-md-2 px-0"><img class="img-logo3 mx-auto d-block" src="../../img/logoUleam.png" alt="Uleam" title="Uleam"></div>
+							<div class="d-none d-md-flex col-12 col-md-2 px-0"><img class="img-logo4 mx-auto d-block" src="../../img/logoManabiProduce.png" alt="Manabí produce" title="Manabí produce"></div>
+							<div class="d-none d-md-flex col-12 col-md-2 px-0"><img class="img-logo5 mx-auto d-block" src="../../img/logoEP.jpg" alt="EP Uleam" title="EP Uleam"></div>
+						</article>
+					</div>
+				</footer> -->
+			</div>
+
+		</div>
+	</section>
+
+	
+	<!-- enlaces de archivos js de bootstrap y javascript personalizado -->
+	<script src="../../js/jquery/jquery.min.js" type="text/javascript"></script>
+	<script src="../../js/popper/popper.min.js" type="text/javascript"></script>
+	<script src="../../js/bootstrap/bootstrap.min.js" type="text/javascript"></script>
+	<script src="../../js/main.js" type="text/javascript"></script>
+	<script src="../../js/jsPDF/jspdf.min.js"></script>
+</body>
+</html>
