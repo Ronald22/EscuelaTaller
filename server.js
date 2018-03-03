@@ -6,9 +6,11 @@ var documento = require("./controllers/documento");
 var curso = require("./controllers/curso");
 var categoria = require("./controllers/categoria");
 var administrador = require("./controllers/administrador");
+var ubicacion = require("./controllers/ubicacion");
 var configuracion = require("./config");
 var httpMsgs = require("./core/mensajesHTTPs");
 var email = require("./core/email");
+var nodemailer = require('nodemailer');
 
 /*-------------------------Estudiante-----------------------------*/
 var rutaEstudiante = express.Router();
@@ -136,6 +138,26 @@ rutaAdministrador.route('/correo/')
 	var insert = [req.body.correo];
 	administrador.actualizarCorreo(req, resp, insert);
 })
+
+/*----------------------------Ubicación--------------------------------*/
+var rutaUbicacion = express.Router();
+rutaUbicacion.use(bodyparser())
+rutaUbicacion.route('/pais/')
+.get(ubicacion.consultarPais);
+rutaUbicacion.route('/provincia/')
+.get(ubicacion.consultarProvincia);
+rutaUbicacion.route('/canton/:id/')
+.get(function(req, resp){				
+	var id = req.params.id,
+		insert = [id];
+	ubicacion.consultarCanton(req, resp, insert);		
+});
+rutaUbicacion.route('/parroquia/:id/')
+.get(function(req, resp){				
+	var id = req.params.id,
+		insert = [id];
+	ubicacion.consultarParroquia(req, resp, insert);		
+});
 /*---------------------------Correo Verificación----------------------------*/
 var rutaCorreo=express.Router()
 rutaCorreo.use(bodyparser())
@@ -144,13 +166,26 @@ rutaCorreo.route('/')
 	var correo = req.body.correo,
 		nombre = req.body.nombre,
 		apellido = req.body.apellido;
+	var	correoE = req.body.correoEmisor,
+		contraseña = req.body.contraseñaCorreo;
+
+	var emisor = nodemailer.createTransport({
+		service:'hotmail',
+		auth:{
+			user: correoE,
+			pass: contraseña
+		}
+	});	
 	
-	email.emisor.sendMail(email.receptor(nombre, apellido, correo), (error, info) => {
+	emisor.sendMail(email.receptor(nombre, apellido, correo), (error, info) => {
         if (error) {
             return console.log(error);
         }
         console.log('Message sent: %s', info.messageId);
     });
+
+    res.writeHead(200, {"Content-Type": "application/json"});
+	res.end();
 });
 
 /*--------------------------------------------------------------------------------*/
@@ -160,6 +195,7 @@ var app = express()
 	.use('/curso',rutaCurso)
 	.use('/categoria',rutaCategoria)
 	.use('/administrador',rutaAdministrador)
+	.use('/ubicacion',rutaUbicacion)
 	.use('/correo',rutaCorreo)
 	.use(express.static(__dirname+'/public'))
 	.listen(configuracion.webPort, function(){

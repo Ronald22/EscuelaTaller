@@ -39,7 +39,7 @@
 		<div class="row">
 			<div class="menu-lateral nav flex-column nav-pills col-2 fixed-top" id="v-pills-tab" role="tablist" aria-orientation="vertical">
 			  	<a class="enlace-menu activado" id="listadoPostulante" data-toggle="pill" href="#v-pills-datos" role="tab" aria-controls="v-pills-listado" aria-selected="true">Datos Administrador</a>
-			  	<a class="enlace-menu" id="perfilPostulante" data-toggle="pill" href="#v-pills-perfil" role="tab" aria-controls="v-pills-perfil" aria-selected="false">Correo de Mensajes</a>
+			  	<a class="enlace-menu" id="perfilPostulante" data-toggle="pill" href="#v-pills-correo" role="tab" aria-controls="v-pills-correo" aria-selected="false">Correo de Mensajes</a>
 			  	<a class="enlace-menu" id="documentoPostulante" data-toggle="pill" href="#v-pills-documento" role="tab" aria-controls="v-pills-documento" aria-selected="false">Otros ajustes</a>
 			  	<div class="logo-uleam d-block mx-auto ">
 			  		<img class="" src="../../img/logoUleam.png" alt="Uleam" title="Uleam">
@@ -157,7 +157,7 @@
 						</div>
 			  		</div>
 			  	</div>	
-			  	<div class="tab-pane fade" id="v-pills-perfil" role="tabpanel" aria-labelledby="perfilPostulante">					
+			  	<div class="tab-pane fade" id="v-pills-correo" role="tabpanel" aria-labelledby="perfilPostulante">					
 			  		<div class="row">				  	
   						<div id="tablaCorreoMensaje" class="tabla-datos col-6 mx-auto my-3 p-3 f-14">	
 			  				<h2 class="text-center">Correo de Mensajes</h2>
@@ -179,10 +179,18 @@
 							        	<form>				        		
 						        			<div class="form-group row">
 						        				<div class="col-4">
-						        					<label class="ml-auto d-none d-md-flex col-form-label col-form-label-sm" for="txtCorreo2" style="width: 70px">Correo:</label>
+						        					<label class="ml-auto d-none d-md-flex col-form-label col-form-label-sm" for="txtCorreoMensajes" style="width: 70px">Correo:</label>
 						        				</div>
 						        				<div class="col-6">
-						        					<input type="text" class="form-control form-control-sm" id="txtCorreo2" aria-describedby="nameHelp" placeholder="ingrese el nuevo correo">
+						        					<input type="text" class="form-control form-control-sm" id="txtCorreoMensaje" aria-describedby="nameHelp" placeholder="ingrese el nuevo correo">
+						        				</div>						        				
+						        			</div>
+						        			<div class="form-group row">
+						        				<div class="col-4">
+						        					<label class="ml-auto d-none d-md-flex col-form-label col-form-label-sm" for="txtContraseñaCorreo" style="width: 70px">Contraseña:</label>
+						        				</div>
+						        				<div class="col-6">
+						        					<input type="password" class="form-control form-control-sm" id="txtContraseñaCorreo" aria-describedby="nameHelp" placeholder="ingrese la contraseña del correo">
 						        				</div>						        				
 						        			</div>
 						        			<div class="p-0 mx-auto">

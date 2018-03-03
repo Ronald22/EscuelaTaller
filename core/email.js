@@ -1,13 +1,5 @@
 var nodemailer = require('nodemailer');
 
-exports.emisor = nodemailer.createTransport({
-		service:'Gmail',
-		auth:{
-			user:'ronald22castro@gmail.com',
-			pass:'pandasux'
-		}
-	});
-
 exports.receptor = function(nombre, apellido, correo){
 	var mimensaje = '<h1>Escuela Taller para la Reconstrucción de la Provincia de Manabí</h1>'
 		mimensaje += '<p> Bienvenid@ '+nombre+' '+apellido+'.</p>'

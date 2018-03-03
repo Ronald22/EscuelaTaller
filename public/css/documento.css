@@ -5,6 +5,47 @@ body{
     font-family: 'Raleway', sans-serif;
 }
 
+h1{
+    font-size: 2.25rem;
+    font-weight: 700;
+    text-shadow: 0 .05rem .1rem rgba(0,0,0,.5)
+}
+h2{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+p{
+    font-size: 0.875rem;
+    margin-bottom: 0; margin-top: .5rem 
+}
+/*----LINK----*/
+a { color: #fff; text-decoration: none; border: none}
+a:focus, a:hover { color: #e9ecef; text-decoration: none }
+
+/*----Colores----*/
+.bg-blanco-transp{ background-color: rgba(255,255,255,.7) }
+.bg-azul-dark{ background-color: #0070A8 }
+.bg-azul-xdark{ background-color: #003a56 }
+.bg-gris-dark{ background-color: #1d1b1b }
+.text-azul-dark { color: #0070A8 }
+.text-gris-dark { color: #1d1b1b }
+.text-rojo-dark { color: #DD1C1A }
+
+/*----Tamaño de fuente----*/
+.f-28{ font-size: 1.75rem } /*tamaño 28px*/
+.f-24{ font-size: 1.5rem } /*tamaño 24px*/
+.f-22{ font-size: 1.375rem } /*tamaño 22px*/
+.f-20{ font-size: 1.25rem } /*tamaño 20px*/
+.f-18{ font-size: 1.125rem } /*tamaño 18px*/
+.f-16{ font-size: 1rem } /*tamaño 16px*/
+.f-14{ font-size: .875rem } /*tamaño 14px*/
+.f-12{ font-size: .75rem } /*tamaño 12px*/
+.f-10{ font-size: .585rem } /*tamaño 10px*/
+
+/*----Bordes----*/
+.b-bottom{ border-bottom: 1px solid #e9ecef }
+
+
 /* HEADER */
 .encabezado{
 	background-color: #0070A8;
@@ -28,32 +69,48 @@ header .titulo-principal{
 
 	margin-bottom:80px; 
 }
-section .caja-documento{
+.administrador-diseño-principal section article{
+    padding: 0; margin: 1rem 0
+}
+.administrador-diseño-principal section article:hover{
+    box-shadow: 0px 1px 9px  #15151544;
+}
+.administrador-diseño-principal .caja-documento{
 	border: 1px solid rgba(216,216,216,0.6);
 	border-radius: 4px;
-	padding: 5px;
-	box-shadow: 0px 1px 7px 2px rgba(216,216,216,0.4);
+	box-shadow: 0px 1px 6px rgba(216,216,216,0.4);
+    height:12rem; 
+    background: #9BD0DD
 }
-
-section .caja-documento .documento {
-	max-width: 100%; 
-	max-height: 100%
+.administrador-diseño-principal .caja-documento:hover{
+	box-shadow: none;
 }
-
-section .caja-descargar{
+.administrador-diseño-principal .caja-documento span{
+    font-size: 6rem;
+    color: #fff;
+} 
+article:hover .caja-documento span{
+    font-size: 6.5rem;
+}
+.administrador-diseño-principal .caja-descargar{
 	margin-top: 5px;
 	border: 1px solid rgba(11,97,56,0.3);
 	border-radius: 0 0 4px 4px 
 }
-
-section .caja-descargar .boton-decargar{
-
+.administrador-diseño-principal .caja-descargar .boton-descargar{
+    border: none; border-right: 1px solid #17a2b8;
+    height: 2.4375rem; width: 2.5rem;
+    background: #fff; color: #17a2b8;
+    border-radius: 0  0 0 2px
+}
+.administrador-diseño-principal .caja-descargar .boton-descargar:hover{
+    background: #17a2b8; color: #fff
 }
 
-section .caja-descargar p{
-	display: inline-block;
-	margin: 0 auto;
-	width: 60%
+.administrador-diseño-principal .caja-descargar p{
+    display: inline-block;
+    margin: 8px auto;
+    width: 79%;
 }
 
 /*------------Logo de organizaciones responsables---------*/
@@ -87,6 +144,71 @@ section .caja-descargar p{
   	-moz-osx-font-smoothing: grayscale;
 }
 
+.glyphicon-user:before {
+    content: "\e008";
+}
+.glyphicon-edit:before {
+  	content: "\e065";
+}
+.glyphicon-plus-sign:before{
+    content: "\e081";
+}
+.glyphicon-info-sign:before{
+    content: "\e086";
+}
+.glyphicon-chevron-down:before{
+    content: "\e114";
+}
+.glyphicon-education:before{
+    content: "\e233";
+}
+.glyphicon-menu-hamburger:before{
+    content: "\e236";
+}
+.dd:before{
+    content: "\e166";
+} 
+.glyphicon-exclamation-sign:before{
+    content: "\e106";
+} 
+.glyphicon-search:before{
+    content:"\e003";
+}
+.glyphicon-glyphicon-th-list:before{
+    content:"\e012";
+}
+.glyphicon-file:before{
+    content:"\e022";
+}
 .glyphicon-save:before{
     content: "\e166";
 } 
+.glyphicon-envelope:before{
+    content:"\2709";
+} 
+.glyphicon-list-alt:before{
+    content:"\e032";
+} 
+.glyphicon-folder-open:before{
+    content:"\e118";
+} 
+.glyphicon-trash:before {
+  content: "\e020";
+}
+.glyphicon-pencil:before {
+  content: "\270f";
+}
+.glyphicon-ok:before {
+  content: "\e013";
+}
+.glyphicon-remove:before {
+  content: "\e014";
+}
+.glyphicon-plus:before {
+  content:"\2b";
+}
+.glyphicon-minus:before {
+  content:"\2212";
+}
+
+

@@ -57,18 +57,79 @@ a:focus, a:hover { color: #e9ecef; text-decoration: none }
 .f-16{ font-size: 1rem } /*tamaño 16px*/
 .f-14{ font-size: .875rem } /*tamaño 14px*/
 .f-12{ font-size: .75rem } /*tamaño 12px*/
+.f-10{ font-size: .585rem } /*tamaño 10px*/
 
 /*----Bordes----*/
 .b-bottom{ border-bottom: 1px solid #e9ecef }
 
+/*---------------------Seccion Oculta----------------------*/
+.section-oculta{
+    width: 100%; 
+    position: fixed;
+    z-index: 1050
+}
+.cuadro-oculto{
+    position: relative;
+    background: #333;
+    height: 6rem;
+    display: none;
+}
+
+.contenedor-link a{
+    width: 130px;
+    padding-top: 2rem; 
+}
+.border-oculto{
+    width: 25px; float: right;
+    border-top: 15px transparent solid;
+    border-bottom: 15px transparent solid;
+    border-left: 15px transparent solid;
+    border-right: 15px transparent solid;
+}
+.border-visible{
+    width: 25px; float: right;
+    border-top: 15px #333 solid;
+    border-bottom: 15px transparent solid;
+    border-left: 15px transparent solid;
+    border-right: 15px #333 solid;
+}
+.border-oculto:hover{
+    border-top: 15px #333 solid;
+    border-right: 15px #333 solid;
+}
+.icon-oculto{
+    position: absolute;
+    margin: -12px 1px;
+    opacity: 0
+}
+
+.border-oculto:hover .icon-oculto{
+    opacity: 9
+}
+.icon-visible{
+    position: absolute;
+    margin: -12px 1px;
+    opacity: 9
+}
+
 /*------------------------Encabezado----------------------------*/
 
 .boton-solicitud{
-    width: 42.1052%; height: 13,9860%;
-    color: #0070A8; font-weight: 700;
-    border: 1px solid #0070A8;   
+    background: white;
+    text-align: center;
+    color: #6c757d;
+    width: 35%; height: 3rem;
+    padding: 0.65rem 0;
+    border-radius: 1px;
+    box-shadow: 0px 0px 6px 2px #00000079;
+    font-weight: 700;
 }
-
+.boton-solicitud:hover{
+    background: #F2F2F2;
+    color: #2E2E2E;
+    border-radius: 1px;
+    box-shadow: 0px 0px 7px 3px #F2F2F280
+}
 /*-----------------------Menú de Navegación----------------------*/
 nav{
     background: #1d1b1b;
@@ -508,3 +569,7 @@ article:hover .caja-documento span{
 .glyphicon-plus:before {
   content:"\2b";
 }
+.glyphicon-minus:before {
+  content:"\2212";
+}
+
